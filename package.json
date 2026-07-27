@@ -1,0 +1,14 @@
+{
+  "name": "news-reader",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "server:dev": "npm --prefix server run dev",
+    "server:install": "npm install --prefix server && npm install --prefix web",
+    "web:dev": "npm --prefix web run dev",
+    "dev": "concurrently -k \"npm run server:dev\" \"npm run web:dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
